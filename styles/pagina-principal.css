@@ -59,6 +59,8 @@ h2 {
 }
 
 .galeria {
+    width: 30%;
+    height: 30%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -183,4 +185,31 @@ footer img {
         width: 30px;
         margin: 2px;
     }
+}
+.grid-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    height: 30vh;
+
+}
+
+.gallery-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.gallery-img,
+#perfil {
+    min-width: 20%;
+    height: 30%;
+}
+
+.grid-gallery img {
+    transition: all 400ms ease-in-out;
+}
+
+.grid-gallery img:hover {
+    transform: translate(-3%, 3%) scale(1.1) rotate(2deg);
 }

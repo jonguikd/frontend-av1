@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.main-back {
+    background: black;
+    color: white
+}
+
+
+.white-back {
+    background: white;
+}
+
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.minsec {
+    min-height: 120vh;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.menu {
+    background: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    border-bottom: 1px solid white;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+}
+
+.space-menu {
+    height: 55px;
+}
+
+.home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    height: 100vh;
+}
+
+.home-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.small-fnt {
+    font-size: small;
+}
+
+.small-fnt-color {
+    font-size: small;
+    color: #6D95FC;
+}
+
+.color-blue {
+    color: #6D95FC;
+}
+
+.large-fnt {
+    font-size: xx-large;
+}
+
+.home-text .large-fnt {
+    margin-bottom: 50px;
+}
+
+.home-img img {
+    max-width: 107%;
+    height: 112.3%;
+
+}
+
+.home-text,
+.home-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.aboutus-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    height: 100vh;
+}
+
+.aboutus-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.aboutus-text,
+.large-fnt {
+    margin: 30px 0px;
+}
+
+.aboutus-img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.aboutus-text,
+.aboutus-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    height: 100vh;
+}
+
+.service-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.services-text,
+.large-fnt {
+    margin: 30px 0px;
+}
+
+.services-img {
+    max-width: 25%;
+    height: 25%;
+    margin: 5rem;
+
+}
+
+.services-text,
+.services-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    height: 30vh;
+}
+
+.portfolio-text {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.portfolio-img {
+    max-width: 80%;
+    height: 100%;
+}
+
+.portfolio-text,
+.portfolio-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    height: 30vh;
+}
+
+.grid-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+.grid-img {
+    max-width: 90%;
+    height: 90%;
+}
+
+.grid-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.grid-bottom {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    height: 30vh;
+
+}
+
+.gallery-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.gallery-img,
+#perfil {
+    min-width: 100%;
+    height: 50%;
+}
+
+.grid-gallery img {
+    transition: all 400ms ease-in-out;
+}
+
+.grid-gallery img:hover {
+    transform: translate(-3%, 3%) scale(1.1) rotate(2deg);
+}
+
+.contactus-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    height: 100vh;
+}
+
+.contactus-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.contactus-form fieldset {
+    border: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 10rem;
+
+}
+
+.form-group {
+    flex: 1 1 auto;
+}
+
+.form-group label {
+    display: block;
+    border: #6D95FC;
+}
+
+#your-name {
+    border: white;
+}
+
+.form-group input,
+.form-group textarea {
+    border: white;
+    padding: 0.5rem 7rem;
+}
+
+.form-group button {
+    border: 0.5rem solid black;
+    background-color: #6D95FC;
+    color: black;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+
+
+}
