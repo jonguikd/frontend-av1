@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Solicitação de Serviços de TI</title>
+    <link rel="stylesheet" href="../styles/servicos-ti.css">
+    <script src="../scripts/servicos.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Carrinho - Solicitação de Serviços de TI</h1>
+    </header>
+
+    <section id="info-usuario">
+        <h2>Informações do Usuário</h2>
+        <div>
+            <label for="nome-usuario">Nome:</label>
+            <span id="nome-usuario">João Silva</span>
+        </div>
+        <div>
+            <label for="email-usuario">E-mail:</label>
+            <span id="email-usuario">joao@example.com</span>
+        </div>
+    </section>
+
+    <section id="solicitacoes-anteriores">
+        <h2>Solicitações Anteriores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data do Pedido</th>
+                    <th>Número da Solicitação</th>
+                    <th>Serviço de TI</th>
+                    <th>Status</th>
+                    <th>Preço</th>
+                    <th>Data Prevista</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/05/2024</td>
+                    <td>001</td>
+                    <td>Manutenção de rede</td>
+                    <td>Em andamento</td>
+                    <td>R$ 150,00</td>
+                    <td>08/05/2024</td>
+                    <td><button onclick="excluirSolicitacao(this)">Excluir</button></td>
+                </tr>
+                <!-- Mais linhas aqui -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="nova-solicitacao">
+        <h2>Nova Solicitação de Serviços</h2>
+        <form id="form-nova-solicitacao" onsubmit="return incluirSolicitacao()">
+            <div>
+                <label for="servico-ti">Serviço de TI:</label>
+                <select id="servico-ti" name="servico-ti">
+                    <option value="manutencao-rede">Manutenção de rede</option>
+                    <option value="instalacao-software">Instalação de software</option>
+                    <option value="backup-dados">Backup de dados</option>
+                    <!-- Mais opções aqui -->
+                </select>
+            </div>
+            <div>
+                <label for="preco">Preço:</label>
+                <span id="preco">R$ 150,00</span>
+            </div>
+            <div>
+                <label for="prazo-atendimento">Prazo de Atendimento:</label>
+                <span id="prazo-atendimento">5 dias úteis</span>
+            </div>
+            <div>
+                <label for="data-prevista">Data Prevista:</label>
+                <span id="data-prevista">08/05/2024</span>
+            </div>
+            <div>
+                <label for="status">Status:</label>
+                <span id="status">Em elaboração</span>
+            </div>
+            <div>
+                <button type="submit">Incluir Solicitação</button>
+                <button type="button" onclick="limparCampos()">Limpar</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+
+</html>

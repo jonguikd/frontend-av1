@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Clientes - Empresa XYZ</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <script src="../scripts/login.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Logo da Empresa XYZ</h1>
+    </header>
+
+    <section id="login-section">
+        <h1>Login de Clientes</h1>
+        <form id="login-form" onsubmit="return realizarLogin()">
+            <div>
+                <label for="email">Login:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div>
+                <button type="submit">Realizar Login</button>
+                <button type="button" onclick="limparCampos()">Limpar</button>
+            </div>
+        </form>
+        <div id="senha-link">
+            <a href="trocar-senha.html">Esqueceu sua senha?</a>
+        </div>
+        <div id="cadastro-link">
+            <a href="cadastro-cliente.html">Cadastre-se aqui</a>
+        </div>
+        <div id="pagina-principal">
+            <a href="pagina-principal.html" class="login-link">Voltar para a página principal</a>
+        </div>
+    </section>
+</body>
+
+</html>

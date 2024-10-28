@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de senha de clientes - Empresa XYZ</title>
+    <link rel="stylesheet" href="../styles/trocar-senha.css">
+    <script src="../scripts/trocar-senha.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Logo da Empresa XYZ</h1>
+    </header>
+
+    <section id="troca-senha-section">
+        <h1>Troca de senha de clientes</h1>
+        <form id="troca-senha-form" onsubmit="return trocarSenha()">
+            <div>
+                <label for="login">Login:</label>
+                <input type="email" id="login" name="login" required>
+            </div>
+            <div>
+                <label for="nova-senha">Nova senha:</label>
+                <input type="password" id="nova-senha" name="nova-senha" required>
+            </div>
+            <div>
+                <label for="confirmar-senha">Confirmar senha:</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+            </div>
+            <div id="instrucoes-senha">
+                <p>A senha deve ter pelo menos 6 caracteres, contendo pelo menos um número, uma letra maiúscula e um dos
+                    seguintes caracteres especiais: @ # $ % & * ! ? / \ | - _ + . =</p>
+                <p>Os seguintes caracteres não são permitidos: ̈ { } [ ] ́ ` ~ ^ : ; <> , “ ‘</p>
+            </div>
+            <div>
+                <button type="submit">Trocar Senha</button>
+                <button type="button" onclick="limparCampos()">Limpar</button>
+            </div>
+        </form>
+        <div id="mensagem-validacao"></div>
+        <div id="pagina-principal">
+            <a href="pagina-principal.html" class="troca-senha-link">Voltar para a página principal</a>
+        </div>
+    </section>
+</body>
+
+</html>

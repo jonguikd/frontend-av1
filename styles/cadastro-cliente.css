@@ -1,0 +1,228 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #212121;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+#cadastro-cliente-section {
+    padding: 20px;
+}
+
+#cadastro-cliente-form {
+    margin-bottom: 20px;
+}
+
+#instrucoes-senha p {
+    margin-bottom: 10px;
+}
+
+#mensagem-validacao {
+    margin-top: 20px;
+}
+
+#cadastro-cliente-form div {
+    margin-bottom: 10px;
+}
+
+#cadastro-cliente-form label {
+    display: block;
+}
+
+#cadastro-cliente-form input[type="text"],
+#cadastro-cliente-form input[type="email"],
+#cadastro-cliente-form input[type="password"],
+#cadastro-cliente-form input[type="tel"],
+#cadastro-cliente-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #fff;
+    background-color: #212121;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+#cadastro-cliente-form input[type="radio"] {
+    display: none;
+}
+
+#cadastro-cliente-form input[type="radio"]+label {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+}
+
+#cadastro-cliente-form input[type="radio"]+label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #212121;
+}
+
+#cadastro-cliente-form input[type="radio"]:checked+label:before {
+    background-color: #fff;
+}
+
+#cadastro-cliente-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#cadastro-cliente-form button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para o campo de entrada de data */
+#data-nascimento {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #fff;
+    background-color: #212121;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* Estilos para o calendário */
+.ui-datepicker {
+    background-color: #212121;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: Arial, sans-serif;
+    /* Selecione uma fonte semelhante à do tema */
+}
+
+.ui-datepicker-header {
+    background-color: #212121;
+    color: #fff;
+    border: none;
+}
+
+.ui-datepicker-title {
+    color: #fff;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    background-color: #212121;
+    color: #fff;
+    border: none;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+    background-color: #454545;
+}
+
+.ui-datepicker-calendar tbody td {
+    background-color: #212121;
+    color: #fff;
+    border: none;
+}
+
+.ui-datepicker-calendar tbody td:hover {
+    background-color: #454545;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    border: none;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
+    #cadastro-cliente-section {
+        padding: 10px;
+    }
+
+    #cadastro-cliente-form {
+        margin-bottom: 10px;
+    }
+
+    #instrucoes-senha p {
+        margin-bottom: 5px;
+    }
+
+    #mensagem-validacao {
+        margin-top: 10px;
+    }
+
+    #cadastro-cliente-form div {
+        margin-bottom: 5px;
+    }
+
+    #cadastro-cliente-form input[type="radio"]+label {
+        margin-right: 5px;
+    }
+
+    #cadastro-cliente-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Estilos para o campo de entrada de data */
+    #data-nascimento {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    /* Estilos para o calendário */
+    .ui-datepicker {
+        font-size: 14px;
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas ainda menores */
+@media screen and (max-width: 400px) {
+    header h1 {
+        font-size: 18px;
+    }
+}

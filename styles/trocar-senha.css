@@ -1,0 +1,139 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #212121;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+#troca-senha-section {
+    padding: 20px;
+}
+
+#troca-senha-form {
+    margin-bottom: 20px;
+}
+
+#instrucoes-senha p {
+    margin-bottom: 10px;
+}
+
+#mensagem-validacao {
+    margin-top: 20px;
+}
+
+#pagina-principal {
+    margin-top: 20px;
+}
+
+#pagina-principal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#troca-senha-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#troca-senha-form input[type="email"],
+#troca-senha-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #fff;
+    background-color: #212121;
+    color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#troca-senha-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#troca-senha-form button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
+    #troca-senha-section {
+        padding: 15px;
+    }
+
+    #troca-senha-form {
+        margin-bottom: 15px;
+    }
+
+    #instrucoes-senha p {
+        margin-bottom: 5px;
+    }
+
+    #mensagem-validacao {
+        margin-top: 15px;
+    }
+
+    #pagina-principal {
+        margin-top: 15px;
+    }
+
+    #troca-senha-form label {
+        margin-bottom: 5px;
+    }
+
+    #troca-senha-form input[type="email"],
+    #troca-senha-form input[type="password"] {
+        padding: 6px;
+        margin-bottom: 5px;
+    }
+
+    #troca-senha-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas ainda menores */
+@media screen and (max-width: 400px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    #troca-senha-form button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

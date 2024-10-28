@@ -1,0 +1,175 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #212121;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+#info-usuario div,
+#solicitacoes-anteriores table,
+#nova-solicitacao form div {
+    margin-bottom: 10px;
+}
+
+#solicitacoes-anteriores table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#solicitacoes-anteriores th,
+#solicitacoes-anteriores td {
+    border: 1px solid #fff;
+    padding: 8px;
+    text-align: left;
+}
+
+#solicitacoes-anteriores th {
+    background-color: #212121;
+}
+
+#solicitacoes-anteriores th:first-child,
+#solicitacoes-anteriores td:first-child {
+    border-left: none;
+}
+
+#solicitacoes-anteriores th:last-child,
+#solicitacoes-anteriores td:last-child {
+    border-right: none;
+}
+
+#solicitacoes-anteriores tbody tr:nth-child(even) {
+    background-color: #333;
+}
+
+#solicitacoes-anteriores tbody tr:hover {
+    background-color: #555;
+}
+
+#nova-solicitacao label {
+    display: block;
+}
+
+#nova-solicitacao span {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #fff;
+    background-color: #212121;
+    margin-bottom: 10px;
+}
+
+#nova-solicitacao button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#nova-solicitacao button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para o select de serviços de TI */
+#servico-ti {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #fff;
+    background-color: #212121;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#servico-ti option {
+    background-color: #212121;
+    color: #fff;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        margin-top: 15px;
+    }
+
+    #info-usuario div,
+    #solicitacoes-anteriores table,
+    #nova-solicitacao form div {
+        margin-bottom: 5px;
+    }
+
+    #solicitacoes-anteriores th,
+    #solicitacoes-anteriores td {
+        padding: 6px;
+    }
+
+    #nova-solicitacao span {
+        padding: 6px;
+        margin-bottom: 5px;
+    }
+
+    #nova-solicitacao button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas ainda menores */
+@media screen and (max-width: 400px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    #nova-solicitacao button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Estilos para o select de serviços de TI */
+#servico-ti {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #fff;
+    background-color: #212121;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#servico-ti option {
+    background-color: #212121;
+    color: #fff;
+}
