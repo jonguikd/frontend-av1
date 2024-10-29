@@ -49,6 +49,40 @@ function validarFormulario() {
 
 function incluir() {
     if (validarFormulario()) {
+        // Coletar todos os dados do formulário
+        const usuario = {
+            email: document.getElementById("email").value,
+            senha: document.getElementById("senha").value,
+            nome: document.getElementById("nome").value,
+            cpf: document.getElementById("cpf").value,
+            dataNascimento: document.getElementById("dataNascimento").value,
+            telefone: document.getElementById("telefone").value,
+            estadoCivil: document.querySelector('input[name="estadoCivil"]:checked').value,
+            escolaridade: document.getElementById("escolaridade").value
+        };
+
+        // Recuperar lista existente de usuários ou criar nova
+        let usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+
+        // Verificar se já existe usuário com mesmo email ou CPF
+        if (usuarios.some(user => user.email === usuario.email)) {
+            alert('Este email já está cadastrado!');
+            return false;
+        }
+
+        if (usuarios.some(user => user.cpf === usuario.cpf)) {
+            alert('Este CPF já está cadastrado!');
+            return false;
+        }
+
+        // Adicionar novo usuário à lista
+        usuarios.push(usuario);
+
+        // Salvar lista atualizada no localStorage
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+        alert('Cadastro realizado com sucesso!');
+        window.location.href = "pagina-principal.html"; // Redirecionamento para página principal
     }
 }
 

@@ -1,9 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Verifica se há um login realizado (só um exemplo, substitua com sua lógica real)
-    var loginRealizado = true; // Altere para true se o login foi realizado, caso contrário, deixe como false
-
-    // Se o login foi realizado, mostra o link de solicitação de serviços de TI
-    if (loginRealizado) {
-        document.getElementById("solicitacao-servicos").style.display = "block";
+    const usuarioLogado = localStorage.getItem('usuarioLogado');
+    const navList = document.querySelector('nav ul');
+    
+    if (usuarioLogado) {
+        // Se usuário está logado, mostra botão de logout e esconde login
+        const loginItem = document.querySelector('nav ul li a[href="login.html"]').parentElement;
+        loginItem.style.display = 'none';
+        
+        // Adiciona botão de logout
+        const logoutItem = document.createElement('li');
+        logoutItem.innerHTML = '<a href="#" onclick="realizarLogout()">Logout</a>';
+        navList.appendChild(logoutItem);
+        
+        // Mostra nome do usuário
+        const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+        const usuarioAtual = usuarios.find(user => user.email === usuarioLogado);
+        if (usuarioAtual) {
+            const welcomeText = document.querySelector('header h1');
+            welcomeText.textContent = `Bem-vindo(a), ${usuarioAtual.nome}!`;
+        }
+    } else {
+        // Se não está logado, esconde link de serviços
+        const servicosItem = document.querySelector('nav ul li a[href="servicos-ti.html"]').parentElement;
+        servicosItem.style.display = 'none';
     }
 });
+
+function realizarLogout() {
+    // Remove o usuário logado do localStorage
+    localStorage.removeItem('usuarioLogado');
+    
+    // Mostra mensagem de logout
+    alert('Logout realizado com sucesso!');
+    
+    // Redireciona para a página principal
+    window.location.href = 'pagina-principal.html';
+}

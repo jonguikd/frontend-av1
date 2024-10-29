@@ -213,3 +213,27 @@ footer img {
 .grid-gallery img:hover {
     transform: translate(-3%, 3%) scale(1.1) rotate(2deg);
 }
+
+nav ul li a[onclick="realizarLogout()"] {
+    color: var(--error-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav ul li a[onclick="realizarLogout()"]:hover {
+    color: #ff4444;
+    text-decoration: underline;
+}
+
+.user-welcome {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}

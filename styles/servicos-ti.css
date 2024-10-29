@@ -173,3 +173,33 @@ h2 {
     background-color: #212121;
     color: #fff;
 }
+
+.nav-buttons {
+    margin-top: 1rem;
+}
+
+.btn-voltar {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .nav-buttons {
+        margin-top: 0.5rem;
+    }
+    
+    .btn-voltar {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
