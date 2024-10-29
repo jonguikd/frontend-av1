@@ -49,6 +49,21 @@ function validarFormulario() {
 
 function incluir() {
     if (validarFormulario()) {
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        const usuarioExistente = usuarios.find((usuario) => usuario.email === email);
+
+        if (usuarioExistente) {
+            alert("Este e-mail já está cadastrado.");
+            return;
+        }
+        usuarios.push({ email, senha });
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        alert("Cadastro realizado com sucesso!");
+        window.location.href = "login.html"; 
     }
 }
 

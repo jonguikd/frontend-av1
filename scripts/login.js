@@ -1,28 +1,29 @@
-function realizarLogin() {
-    var email = document.getElementById('email').value;
-    var senha = document.getElementById('senha').value;
 
-    // Validar o email
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert("Por favor, insira um email válido.");
-        return false;
+
+function login() {
+    const email = document.getElementById("loginEmail").value;
+    const senha = document.getElementById("loginSenha").value;
+    const mensagemErro = document.getElementById("mensagemErro");
+
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    console.log(usuarios)
+
+    const usuarioEncontrado = usuarios.find(
+        (usuario) => usuario.email === email && usuario.senha === senha
+    );
+
+    if (usuarioEncontrado) {
+        alert("Login realizado com sucesso!");
+        window.location.href = "pagina-principal.html";
+    } else {
+        mensagemErro.textContent = "E-mail ou senha incorretos. Tente novamente.";
     }
-
-    // Validar a senha
-    if (senha.trim() === "") {
-        alert("Por favor, insira sua senha.");
-        return false;
-    }
-
-    // Se todas as validações passarem
-    alert("Validação realizada com sucesso. Redirecionando para a página de conteúdo...");
-    // Aqui você pode redirecionar para a página de conteúdo
-    return true;
 }
 
-function limparCampos() {
-    document.getElementById('email').value = "";
-    document.getElementById('senha').value = "";
-    document.getElementById('email').focus();
+function limpar() {
+    document.getElementById("loginForm").reset();
+    document.getElementById("loginEmail").focus();
+    document.getElementById("mensagemErro").textContent = "";
 }
+
